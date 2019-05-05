@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BI-Pacman</title>
+    <link href="pacmanCSS.css" rel="stylesheet" type="text/css" />
+
+    <META NAME = "keywords" CONTENT = "game, packman, old games, mini game">
+
+    <META NAME = "description" CONTENT = "this is an epic and historical
+    thing we're doing here! let's play the old and loved packman!">
+
+    <link rel="shortcut icon" type="image/png" href="image/pageIcon.ico">
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/additional-methods.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ************* -->
+    <!-- the top image -->
+    <!-- ************* -->
+    <center>
+    <header>
+        <ul>
+            <div id="header" style="display: block">
+                <img src="image\BI-Pacman.png" id="main_logo" style="height:100%">
+            </div>
+        </ul>
+    </header>
+    </center>
+            
+    <!-- ******** -->
+    <!-- the menu -->
+    <!-- ******** -->
+    <menu id="menu">
+        <ul>
+            <li><a id="menu_welcome" href="#">Welcome</a></li>
+            <li><a id="menu_register" href="#">Register</a></li>
+            <li><a id="menu_login" href="#"> Login </a></li>
+            <li><a id="menu_about" href="#">About</a></li>
+        </ul>
+    </menu>   
+    
+    
+    <main role="main" class="container">
+        <content>
+
+            <!-- ************* -->
+            <!-- Wellcome page -->
+            <!-- ************* -->
+            <div id="welcome" style="display: block">
+                <p><h1>Welcome to the BI-Pacman game.<br/></h1>
+                            If you have a user alread,, sign in and start playing.<br/>
+                            Not registered yet?! Make a short sign up and start playing.
+                </p>
+                <div>
+                    <button class="button_sub" id="login_btn" type="button">Login</button>
+                    <button class="button_sub" id="register_btn" type="button">Register</button>
+                </div>
+                <img src="image/pacman_welcomeGIF.gif" id="welcome_gif">
+            </div>
+            
+
+            <!-- ************* -->
+            <!-- Register page -->
+            <!-- ************* -->
+            <div id="register" style="display: none">
+                    <form class="forms" id="register_form" autocomplete="off">
+                        <h2>Register</h2>
+                        <div><input name="first_name" id="first_name" placeholder="First Name" type="text"></div>
+                        <div><input name="last_name" id="last_name" placeholder="Last Name" type="text"></div>
+                        <div><input name="user_name" id="user_name" placeholder="User Name" type="text"></div>
+                        <div><input name="password" id="password" placeholder="Password" type="password"></div>
+                        <div><input name="confirm_password" id="confirm_password" placeholder="Confirm Password" type="password"></div>
+                        <div><input name="email" id="email" placeholder="Email address" type="text"></div>
+                        <div><input name="birthday" id="birthday" placeholder="Birthday" type="date"></div>
+                        <div><input class="button_sub" id="submit_register" type="submit" value="Sign Up"></div>
+                    </form>
+            </div>
+
+            <!-- ************* -->
+            <!-- Login page -->
+            <!-- ************* -->
+            <div id="login" style="display: none">
+                    <form class="forms" id="login_form" autocomplete="off">
+                        <h2>Login</h2>
+                        <div><input name="login_user_name" id="login_user_name" placeholder="User Name" type="text"></div>
+                        <div><input name="login_password" id="login_password" placeholder="Password" type="password"></div>
+                        <div><input class="button_sub" id="submit_login" type="submit" value="Sign In"></div>
+                    </form>
+            </div>
+
+            <!-- ************* -->
+            <!-- About page -->
+            <!-- ************* -->
+            <div id="about" class="modal" style="display: none">
+                <center>
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                            <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>By: Idan Revah & Ben Moalem</h2>
+                            </div>
+                            <div class="modal-body">
+                                    <p>We used some different packages of jQuery for all the forms, to check validity of content for example</p>
+                            </div>
+                                    <div class="modal-footer">
+                                    <h4>We encountered difficulties using javascript and jQuery,
+                                         but we managed to deal with them via the Internet. In addition,
+                                          we had difficulties creating the game itself and integrating all the necessary components for it</h4>
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+
+            <!-- ************* -->
+            <!-- Settings page -->
+            <!-- ************* -->
+            <div id="pre_game" style="display: none">
+                <form class="forms" id="pre_game_form" autocomplete="off">
+                    <img src="image\Settings.png" height="14%" width="14%"> 
+                    <h2>Settings</h2>
+            
+                    <text>Number of balls:  <div style="display:inline-block"><input name="num_balls" id="num_balls" type="text"></div> (50-90)</text>
+                    <br/>
+                    <text>Number of ghosts:  <div style="display:inline-block"><input name="num_ghost" id="num_ghost" type="text"></div> (1-3)</text>
+                    <br/>
+                    <text>Time in sec:  <div style="display:inline-block"><input name="time" id="time"  type="text"></div> (min 60 sec)</text>
+                    <br/><br/>
+
+                    <h4>To change key, press on the text bar next to the key and then press the key you want</h4>
+                    <div><i class="fas fa-arrow-alt-circle-up"></i>&nbsp&nbsp&nbsp&nbsp<input id="key_up" placeholder="Click here, then press a key" type="text"></div>
+                    <div> <i class="fas fa-arrow-alt-circle-down"></i>&nbsp&nbsp&nbsp&nbsp<input id="key_down" placeholder="Click here, then press a key" type="text"></div>
+                    <div><i class="fas fa-arrow-alt-circle-left"></i>&nbsp&nbsp&nbsp&nbsp<input id="key_left" placeholder="Click here, then press a key" type="text"></div>
+                    <div><i class="fas fa-arrow-alt-circle-right"></i>&nbsp&nbsp&nbsp&nbsp<input id="key_right" placeholder="Click here, then press a key" type="text"></div>
+                                        
+                    <h4>Choose the color of balls:</h4>
+                    <div>5 Points Ball COLOR: <input type="color" name="point_color_5" id="point_color_5" value="#ffffff"></div>
+                    <div>15 Points Ball COLOR: <input type="color" name="point_color_15" id="point_color_15" value="#14b716"></div>
+                    <div>25 Points Ball COLOR: <input type="color" name="point_color_25" id="point_color_25" value="#e52929"></div>
+                    <div>
+                        <button class="button_sub" id="random" type="button">Random</button>
+                        <input class="button_sub" id="submit_pre_game" type="submit" value="Start!">
+                    </div>
+                </form>
+            </div>
+            
+            <!-- ************* -->
+            <!-- Main-Game page -->
+            <!-- ************* -->
+            <div id="board_div" style="display: none">
+                        <div id="board" style="display: none">
+                            <div>
+                                <span>Player</span>
+                                <input id="lblPlayer" class="game_lbl" type="text" style="background: black; color: white" readonly>
+        
+                                <span>Score</span>
+                                <input id="lblScore" class="game_lbl" type="text" style="background: black; color: white" readonly>
+                                <br/>
+                                <span>Time Left</span>
+                                <input id="lblTime" class="game_lbl" type="text" style="background: black; color: white" readonly>
+        
+                                <span>Life</span>
+                                <canvas id="lblHeart" style="width: 120px; height: 20px"></canvas>
+                                <img id="heart" src="image/heart.png" style="display: none">
+                            </div>
+        
+                            <canvas id="canvas" height="600" width="600"></canvas>
+                            <canvas id="canvas-board" style="padding-top: 10px;"></canvas>
+                            <img id="redGhost" src="image/redGhost.gif" style="display: none">
+                            <img id="blueGhost" src="image/blueGhost.gif" style="display: none">
+                            <img id="pinkGhost" src="image/pinkGhost.gif" style="display: none">
+                            <img id="star_shape" src="image/star_bonus.gif" style="display: none">
+                            <img id="points_shape" src="image/points_gift.png" style="display: none">
+                            <img id="time_shape" src="image/time_gift.png" style="display: none">
+                            <img id="heart_shape" src="image/heart.png" style="display: none">
+                        </div>
+                        <div id="game_over_div" style="display: none">
+                            <img id="game_over" src="image/game_over.gif" style="display: block">
+                        </div>
+                        <button class="button_sub" id="new_game" type="button">Start New Game</button>
+            </div>
+            </div>
+        </content>
+    </main>
+
+
+    <!-- *********** -->
+    <!--  the footer -->
+    <!-- *********** -->
+    <footer id="footer">
+            <p>
+                This application was developed by Ben Moalem & Idan Revah
+            </p>
+    </footer>    
+
+
+    <!--  links to the scripts -->
+    <script src="js/game.js"></script>
+	<script src="js/top_menu.js"></script>
+	<script src="js/pre_game.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/about.js"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+#header
+{
+	background: white;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:10%;
+}
+
+
+/* --------------------------TOP MENU----------------------------- */
+menu
+{
+	position: absolute;
+    mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+    margin: 0;
+    min-width: 768px;
+    top: 10%;
+    left: 0;
+    right: 0;
+}
+    
+menu ul{
+	text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+    
+}
+    
+menu ul li
+{
+	display: inline-block;
+	padding: 0 40px;
+    border-bottom:none;
+    flex: 1 0 auto;
+    position: relative;
+}
+menu ul li a
+{	
+	padding: 18px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    color: blue;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+}
+
+
+menu ul li a:hover
+{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+}
+
+menu ul li a::before, menu ul li a::after
+{
+    content: "";
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width:0%;
+    height: 4px;
+    background:blue;
+    transition: .2s width ease-in-out;
+}
+
+menu ul li a::before
+{
+    left:0;
+}
+
+menu ul li a:hover::after,menu ul li a:hover::before
+{
+    width: 50%;
+}
+/* ------------------------------------------------------- */
+
+
+
+/* --------------------------SUB BUTTON----------------------------- */
+.button_sub {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+	background-color: white; 
+	color: black; 
+	border: 2px solid #008CBA;
+	-moz-box-shadow: 3px 4px 0px 0px #210bec;
+	-webkit-box-shadow: 3px 4px 0px 0px #210bec;
+	box-shadow: 3px 4px 0px 0px #210bec;
+	-moz-border-radius:18px;
+	-webkit-border-radius:18px;
+	border-radius:18px;
+  }
+.button_sub:hover {
+	background-color: #008CBA;
+	color: white;
+  }
+/* ------------------------------------------------------- */
+
+
+
+.button_arrow {
+	-moz-box-shadow:inset 0px 0px 3px -5px #91b8b3;
+	-webkit-box-shadow:inset 0px 0px 3px -5px #91b8b3;
+	box-shadow:inset 0px 0px 3px -5px #91b8b3;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3a4747), color-stop(1, #3a4747));
+	background:-moz-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:-webkit-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:-o-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:-ms-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:linear-gradient(to bottom, #3a4747 5%, #3a4747 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a4747', endColorstr='#3a4747',GradientType=0);
+	background-color:#3a4747;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:5px solid #323d3a;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:14px 14px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+.button_arrow:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #3a4747), color-stop(1, #3a4747));
+	background:-moz-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:-webkit-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:-o-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:-ms-linear-gradient(top, #3a4747 5%, #3a4747 100%);
+	background:linear-gradient(to bottom, #3a4747 5%, #3a4747 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a4747', endColorstr='#3a4747',GradientType=0);
+	background-color:#3a4747;
+}
+.button_arrow:active {
+	position:relative;
+	top:1px;
+}
+
+.forms, .p
+{
+	font-family: Georgia, "Times New Roman", Time, serif;
+    font-size: 16px;
+    background-color: #568688;
+    padding: 30px 30px 25px 30px;
+    border: 7px solid #1d0fd8;
+    color: black;
+    text-align: center;
+    margin: auto;
+}
+
+h2{
+	font-size: 30px;
+	color: rgb(195, 233, 226)
+}
+
+.container
+{
+	position: absolute;
+	top: 25%;
+	width: 50%;
+	text-align: center;
+	left: 25%;
+	right: 25%;
+	
+}
+
+/* --------------------------MODAL----------------------------- */
+  /* ABOUT */
+  /* The Modal (background) */
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	position: relative;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	animation-name: animatetop;
+	animation-duration: 0.4s
+  }
+
+  /* Modal Header */
+.modal-header {
+	padding: 2px 16px;
+	background-color: #008CBA;
+	color: white;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+		padding: 2px 16px;
+	}
+  
+  /* Modal Footer */
+  .modal-footer {
+	padding: 2px 16px;
+	background-color: #008CBA;
+	color: white;
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+	from {top: -30%; opacity: 0}
+	to {top: 0; opacity: 1}
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+/* --------------------------MODAL----------------------------- */
+
+
+#canvas{
+	border: 8px solid #008CBA;
+}
+
+#footer
+{
+	position: relative;
+	top:800px;
+	left:0px;
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+}
